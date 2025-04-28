@@ -16,229 +16,274 @@
       "title": "Our Cyber Security Services",
       "cards": [
         {
-          "icon": "fas fa-shield-virus",
-          "title": "Assessments & Reviews",
-          "description": "In-depth security assessments and code reviews to identify vulnerabilities. We help you understand your security posture and prioritize remediation efforts.",
-          "link": "assessments-reviews.html"
+          "icon": "fas fa-tasks",
+          "title": "CMMC Preparation",
+          "description": "Expert guidance and support to prepare for Cybersecurity Maturity Model Certification (CMMC) assessments.",
+          "link": "cmmc-preparation.html"
+        },
+        {
+          "icon": "fas fa-shield-alt",
+          "title": "Security Assessment",
+          "description": "Comprehensive assessments to identify vulnerabilities and strengthen your overall security posture.",
+          "link": "security-assessment.html"
+        },
+        {
+          "icon": "fas fa-balance-scale-right",
+          "title": "Risk Management Framework",
+          "description": "Implementing and managing NIST Risk Management Framework (RMF) processes for federal compliance.",
+          "link": "risk-management-framework.html"
         },
         {
           "icon": "fas fa-binoculars",
-          "title": "Monitoring & Vulnerability Management",
-          "description": "Continuous monitoring and proactive management of vulnerabilities to mitigate threats. Stay ahead of attacks with ongoing vigilance and rapid response.",
-          "link": "monitoring-vulnerability.html"
+          "title": "Continuous Monitoring",
+          "description": "Ongoing security monitoring and analysis to detect and respond to threats in real-time.",
+          "link": "continuous-monitoring.html"
+        }
+      ]
+    }
+  },
+  "cmmcPreparation": {
+    "hero": {
+      "title": "CMMC Preparation",
+      "subtitle": "Navigating the path to Cybersecurity Maturity Model Certification"
+    },
+    "overview": {
+      "title": "Understanding CMMC",
+      "paragraphs": [
+        "The Cybersecurity Maturity Model Certification (CMMC) is a unified standard required for Department of Defense (DoD) contractors. It ensures appropriate levels of cybersecurity controls and processes are in place to protect Controlled Unclassified Information (CUI) and Federal Contract Information (FCI). Achieving CMMC compliance is crucial for organizations within the Defense Industrial Base (DIB).",
+        "K2 Consulting provides expert guidance to help organizations understand their CMMC requirements, assess their current posture, and develop a strategic roadmap to achieve the necessary certification level. We demystify the complexities of CMMC domains, practices, and assessment processes."
+      ],
+      "features": [
+        {
+          "icon": "fa-search",
+          "title": "Gap Analysis & Scoping",
+          "description": "Identify the applicable CMMC level, define the scope of your assessment, and perform a detailed gap analysis against CMMC practices and processes."
         },
         {
-          "icon": "fas fa-balance-scale",
-          "title": "Audit & Reporting Compliance",
-          "description": "Expert support for navigating security audits and meeting compliance mandates like FISMA. We streamline the reporting and remediation process.",
-          "link": "audit-reporting.html"
+          "icon": "fa-tasks",
+          "title": "Remediation Planning & Support",
+          "description": "Develop a prioritized Plan of Action & Milestones (POA&M) to address identified gaps and provide expert support during remediation implementation."
         },
         {
-          "icon": "fas fa-file-medical-alt",
-          "title": "Documentation & Support",
-          "description": "Developing comprehensive security documentation (policies, plans, procedures) and providing ongoing support to maintain your security program effectively.",
-          "link": "documentation-support.html"
+          "icon": "fa-file-alt",
+          "title": "Policy & Documentation Development",
+          "description": "Create and refine policies, procedures, and System Security Plans (SSPs) required to meet CMMC documentation requirements."
+        },
+        {
+          "icon": "fa-clipboard-check",
+          "title": "Assessment Readiness",
+          "description": "Conduct readiness reviews and mock assessments to prepare your organization for the official CMMC assessment by a C3PAO."
         }
       ]
     },
-    "approach": {
-      "title": "Our Proactive Security Approach",
-      "cards": [
-        { "title": "Threat Landscape Analysis", "description": "Understanding the specific cyber threats relevant to your industry and operational context." },
-        { "title": "Risk-Based Assessment", "description": "Prioritizing security efforts and investments based on the potential impact of identified risks." },
-        { "title": "Layered Security Controls", "description": "Implementing defense-in-depth with multiple layers of technical, administrative, and physical controls." },
-        { "title": "Compliance Integration", "description": "Aligning security practices and documentation with relevant regulatory requirements (FISMA, NIST, etc.)." },
-        { "title": "Incident Response Readiness", "description": "Developing and testing incident response plans to ensure effective handling of security breaches." },
-        { "title": "Security Awareness Training", "description": "Educating personnel to recognize and respond appropriately to threats like phishing and social engineering." },
-        { "title": "Technology Implementation", "description": "Assisting with the selection, configuration, and management of appropriate security technologies." },
-        { "title": "Third-Party Risk Management", "description": "Assessing and managing the security risks associated with vendors and partners." },
-        { "title": "Continuous Monitoring & Improvement", "description": "Actively monitoring the environment and adapting security measures as threats and business needs evolve." }
-      ]
-    },
     "faq": {
-      "title": "Frequently Asked Questions",
+      "title": "CMMC FAQs",
       "questions": [
-        { "question": "What is the goal of a security assessment?", "answer": "To identify vulnerabilities, weaknesses, and potential threats within an organization's systems, applications, or network infrastructure before they can be exploited." },
-        { "question": "Why is continuous monitoring important?", "answer": "The threat landscape is constantly changing. Continuous monitoring provides ongoing visibility into security posture, allowing for rapid detection and response to new threats or vulnerabilities." },
-        { "question": "What is FISMA?", "answer": "The Federal Information Security Management Act (FISMA) is a US law requiring federal agencies to develop, document, and implement agency-wide information security programs. Many contractors also need to comply." },
-        { "question": "How can you help with audit remediation?", "answer": "We assist organizations in addressing findings from security audits by developing remediation plans, implementing corrective actions, and providing evidence of compliance." }
+        {
+          "question": "What are the different CMMC levels?",
+          "answer": "CMMC 2.0 has three levels: Level 1 (Foundational), Level 2 (Advanced), and Level 3 (Expert). The required level depends on the sensitivity of the information handled (FCI or CUI) and the requirements specified in the DoD contract."
+        },
+        {
+          "question": "Who needs CMMC certification?",
+          "answer": "Any organization that handles FCI or CUI as part of a DoD contract will likely need to achieve CMMC certification at the level specified in their contract."
+        },
+        {
+          "question": "What is the difference between CMMC and NIST SP 800-171?",
+          "answer": "NIST SP 800-171 provides the security requirements for protecting CUI. CMMC builds upon NIST SP 800-171 by adding process maturity requirements and requiring third-party assessments (for Levels 2 and 3) to verify implementation."
+        },
+        {
+          "question": "What is a C3PAO?",
+          "answer": "A CMMC Third-Party Assessment Organization (C3PAO) is an organization authorized by the CMMC Accreditation Body (The Cyber AB) to conduct official CMMC assessments."
+        }
       ]
     },
     "cta": {
-      "title": "Secure Your Operations?",
-      "description": "Contact us to discuss how our cyber security expertise can protect your organization."
+      "title": "Ready to Achieve CMMC Compliance?",
+      "description": "Contact K2 Consulting today to start your CMMC preparation journey and secure your place in the Defense Industrial Base.",
+      "modalFunction": "showCyberSecurityModal()"
     }
   },
-  "assessmentsReviews": {
+  "securityAssessment": {
     "hero": {
-      "title": "Security Assessments & Code Reviews",
-      "subtitle": "Identifying vulnerabilities and strengthening your security posture through expert analysis."
+      "title": "Security Assessment",
+      "subtitle": "Identifying vulnerabilities and strengthening your defenses"
     },
     "overview": {
-      "title": "Uncovering Security Weaknesses",
+      "title": "Understanding Your Security Posture",
       "paragraphs": [
-        "Proactive identification of security flaws is essential to prevent breaches. K2 Consulting offers comprehensive Security Assessments and secure Code Reviews designed to uncover vulnerabilities in your systems, applications, and infrastructure. Our assessments simulate real-world attack scenarios and evaluate your defenses against industry best practices and compliance requirements.",
-        "Our experienced security professionals utilize a combination of automated tools and manual testing techniques to perform thorough evaluations. We assess network configurations, application security, cloud environments, and adherence to security policies. Secure code reviews examine application source code for common programming errors that could lead to vulnerabilities like SQL injection, cross-site scripting (XSS), and buffer overflows. We provide detailed reports with prioritized findings and actionable recommendations for remediation."
+        "In today's evolving threat landscape, understanding your organization's security weaknesses is the first step towards effective protection. K2 Consulting's Security Assessment services provide a comprehensive evaluation of your systems, networks, applications, and procedures to identify vulnerabilities before they can be exploited by attackers.",
+        "Our assessments go beyond simple scans, incorporating manual testing, configuration reviews, and policy analysis aligned with industry best practices (like NIST, CIS) and relevant compliance frameworks. We provide clear, actionable reports detailing findings, potential impact, and prioritized recommendations for remediation."
       ],
       "features": [
-        { "icon": "fas fa-network-wired", "title": "Network Vulnerability Assessments", "description": "Scanning and analyzing network infrastructure for known vulnerabilities and misconfigurations." },
-        { "icon": "fas fa-code", "title": "Application Security Testing", "description": "Performing static (SAST) and dynamic (DAST) analysis to find flaws in web and mobile applications." },
-        { "icon": "fas fa-cloud", "title": "Cloud Security Assessments", "description": "Reviewing cloud configurations (AWS, Azure, GCP) for security best practices and compliance." },
-        { "icon": "fas fa-file-code", "title": "Secure Code Reviews", "description": "Manual and automated analysis of source code to identify security bugs and design flaws." }
-      ]
-    },
-    "approach": {
-      "title": "Our Assessment & Review Approach",
-      "cards": [
-        { "title": "Scoping & Planning", "description": "Defining the objectives, scope, and methodology for the assessment or review." },
-        { "title": "Information Gathering", "description": "Collecting necessary details about the target systems, applications, or codebase." },
-        { "title": "Vulnerability Analysis & Testing", "description": "Executing scans, tests, and manual reviews based on the defined scope." },
-        { "title": "Findings Validation & Prioritization", "description": "Verifying identified vulnerabilities and prioritizing them based on risk and impact." },
-        { "title": "Reporting & Recommendations", "description": "Delivering a clear report detailing findings, potential impact, and actionable remediation steps." },
-        { "title": "Remediation Support", "description": "Providing guidance and support to development and operations teams during remediation." }
+        {
+          "icon": "fa-network-wired",
+          "title": "Vulnerability Assessments",
+          "description": "Systematic scanning and analysis to identify known vulnerabilities in your network infrastructure, servers, and endpoints."
+        },
+        {
+          "icon": "fa-laptop-code",
+          "title": "Penetration Testing",
+          "description": "Simulating real-world attacks to actively test the effectiveness of your security controls and identify exploitable weaknesses."
+        },
+        {
+          "icon": "fa-cloud-lock",
+          "title": "Cloud Security Assessments",
+          "description": "Reviewing configurations and security controls within your cloud environments (AWS, Azure, GCP) against best practices."
+        },
+        {
+          "icon": "fa-mobile-alt",
+          "title": "Application Security Testing",
+          "description": "Assessing web and mobile applications for common vulnerabilities like injection flaws, XSS, and authentication issues (SAST/DAST)."
+        }
       ]
     },
     "faq": {
-      "title": "Frequently Asked Questions",
+      "title": "Security Assessment FAQs",
       "questions": [
-        { "question": "How often should we conduct security assessments?", "answer": "Regular assessments (e.g., annually or semi-annually) are recommended, along with assessments after significant changes to systems or applications." },
-        { "question": "What's the difference between a vulnerability assessment and penetration testing?", "answer": "A vulnerability assessment identifies known weaknesses. Penetration testing goes further by attempting to actively exploit those weaknesses to simulate a real attack." },
-        { "question": "Can secure code reviews slow down development?", "answer": "When integrated properly into the development lifecycle (DevSecOps), code reviews can identify issues early, actually saving time and cost compared to fixing vulnerabilities found later in production." },
-        { "question": "Do you provide remediation services?", "answer": "While our primary focus here is assessment and review, we provide detailed recommendations and can work closely with your teams or partners to support the remediation process." }
+        {
+          "question": "How often should security assessments be performed?",
+          "answer": "Regular assessments (e.g., annually) are crucial. More frequent assessments might be needed for critical systems or after significant infrastructure changes. Penetration testing frequency depends on risk appetite and compliance requirements."
+        },
+        {
+          "question": "What is the difference between a vulnerability assessment and penetration testing?",
+          "answer": "A vulnerability assessment identifies and reports potential weaknesses. Penetration testing attempts to actively exploit those weaknesses to determine the actual risk and impact, simulating an attack."
+        },
+        {
+          "question": "What do we receive after an assessment?",
+          "answer": "You will receive a detailed report outlining the assessment scope, methodology, findings (including severity ratings), potential impact, and prioritized, actionable recommendations for remediation."
+        },
+        {
+          "question": "Do you fix the vulnerabilities you find?",
+          "answer": "Our primary role in assessments is identification and reporting. We provide clear remediation guidance and can offer separate services or work with your team/partners to assist with the implementation of fixes."
+        }
       ]
     },
     "cta": {
-      "title": "Identify Your Security Gaps?",
-      "description": "Contact us to schedule a security assessment or code review for your critical systems."
+      "title": "Uncover Your Security Weaknesses?",
+      "description": "Contact K2 Consulting today to schedule a comprehensive security assessment tailored to your organization's needs.",
+      "modalFunction": "showCyberSecurityModal()"
     }
   },
-  "monitoringVulnerability": {
+  "riskManagementFramework": {
     "hero": {
-      "title": "Continuous Monitoring & Vulnerability Management",
-      "subtitle": "Proactively identifying threats and managing vulnerabilities to maintain a strong security posture."
+      "title": "Risk Management Framework (RMF)",
+      "subtitle": "Achieving and maintaining compliance for federal systems"
     },
     "overview": {
-      "title": "Maintaining Vigilance",
+      "title": "Navigating the NIST RMF",
       "paragraphs": [
-        "The cyber threat landscape is dynamic, requiring constant vigilance. K2 Consulting provides Continuous Monitoring and Vulnerability Management services to help organizations stay ahead of threats. Our solutions offer ongoing visibility into your security posture, enabling rapid detection of suspicious activities and timely remediation of newly discovered vulnerabilities.",
-        "We implement robust monitoring systems (like Security Information and Event Management - SIEM) that collect and analyze log data from across your network, servers, and applications. Our vulnerability management program involves regular scanning, risk assessment of identified vulnerabilities, and tracking remediation efforts. By combining continuous monitoring with proactive vulnerability management, we help you reduce your attack surface and respond effectively to security events."
+        "The NIST Risk Management Framework (RMF) provides a mandatory, structured process for managing security and privacy risk for federal information systems. Implementing RMF is essential for government agencies and contractors handling federal data to achieve an Authority to Operate (ATO).",
+        "K2 Consulting offers comprehensive RMF support services, guiding organizations through each step of the RMF lifecycle. Our experts help you categorize systems, select and implement controls, conduct assessments, authorize systems, and establish continuous monitoring programs, ensuring compliance with FISMA and NIST standards (like SP 800-53)."
       ],
       "features": [
-        { "icon": "fas fa-eye", "title": "Security Event Monitoring (SIEM)", "description": "Real-time collection and analysis of security logs for threat detection and alerting." },
-        { "icon": "fas fa-bug", "title": "Vulnerability Scanning & Assessment", "description": "Regular scanning to identify vulnerabilities across infrastructure and applications." },
-        { "icon": "fas fa-tasks", "title": "Patch Management Guidance", "description": "Assisting in the prioritization and management of security patching processes." },
-        { "icon": "fas fa-shield-alt", "title": "Threat Intelligence Integration", "description": "Leveraging threat feeds to enhance detection capabilities and prioritize vulnerabilities." }
-      ]
-    },
-    "approach": {
-      "title": "Our Monitoring & Vulnerability Mgmt Approach",
-      "cards": [
-        { "title": "Asset Discovery & Baselining", "description": "Identifying all assets within scope and establishing a security baseline." },
-        { "title": "Monitoring Strategy & Tooling", "description": "Designing a monitoring plan and deploying appropriate tools (e.g., SIEM, vulnerability scanners)." },
-        { "title": "Regular Scanning & Analysis", "description": "Performing scheduled vulnerability scans and analyzing monitoring alerts." },
-        { "title": "Risk Prioritization", "description": "Evaluating vulnerabilities and alerts based on severity, exploitability, and asset criticality." },
-        { "title": "Remediation Tracking", "description": "Monitoring the progress of patching and other remediation activities." },
-        { "title": "Reporting & Metrics", "description": "Providing regular reports on security posture, vulnerability status, and monitoring trends." }
+        {
+          "icon": "fa-sitemap",
+          "title": "System Categorization & Control Selection",
+          "description": "Determine system impact levels (FIPS 199) and select the appropriate baseline security controls (NIST SP 800-53)."
+        },
+        {
+          "icon": "fa-cogs",
+          "title": "Control Implementation & Documentation",
+          "description": "Assist with implementing security controls and developing comprehensive documentation, including System Security Plans (SSPs)."
+        },
+        {
+          "icon": "fa-clipboard-list",
+          "title": "Security Control Assessment (SCA)",
+          "description": "Perform independent assessments to verify control effectiveness and develop Security Assessment Reports (SARs)."
+        },
+        {
+          "icon": "fa-stamp",
+          "title": "Authorization & Continuous Monitoring",
+          "description": "Prepare authorization packages (ATO packages), support Authorizing Officials (AOs), and establish robust continuous monitoring strategies."
+        }
       ]
     },
     "faq": {
-      "title": "Frequently Asked Questions",
+      "title": "RMF FAQs",
       "questions": [
-        { "question": "What is the difference between monitoring and vulnerability management?", "answer": "Monitoring focuses on detecting active threats and suspicious behavior in real-time. Vulnerability management focuses on proactively identifying and fixing weaknesses before they can be exploited." },
-        { "question": "How do you prioritize which vulnerabilities to fix first?", "answer": "Prioritization is typically based on factors like the CVSS score (Common Vulnerability Scoring System), asset criticality, threat intelligence (is it being actively exploited?), and ease of exploitation." },
-        { "question": "Do you offer 24/7 monitoring services?", "answer": "We can tailor monitoring solutions to meet your needs, potentially partnering for 24/7 Security Operations Center (SOC) capabilities if required." },
-        { "question": "How does patch management fit into vulnerability management?", "answer": "Patching is a key remediation activity within vulnerability management. Applying vendor patches is often the primary way to fix identified software vulnerabilities." }
+        {
+          "question": "What are the steps in the NIST RMF process?",
+          "answer": "The RMF consists of seven steps: Prepare, Categorize, Select, Implement, Assess, Authorize, and Monitor."
+        },
+        {
+          "question": "Who needs to follow the RMF?",
+          "answer": "All U.S. federal government agencies must follow the RMF for their information systems. Contractors operating systems on behalf of agencies or handling federal data often need to comply as well."
+        },
+        {
+          "question": "What is an Authority to Operate (ATO)?",
+          "answer": "An ATO is the official management decision given by a senior organizational official (Authorizing Official) to authorize operation of an information system and to explicitly accept the risk to organizational operations based on the implementation of an agreed-upon set of security controls."
+        },
+        {
+          "question": "How does RMF relate to FISMA?",
+          "answer": "The Federal Information Security Modernization Act (FISMA) requires federal agencies to implement information security programs. The NIST RMF provides the mandatory framework and methodology agencies use to meet FISMA requirements."
+        }
       ]
     },
     "cta": {
-      "title": "Maintain Continuous Security Awareness?",
-      "description": "Contact us to implement robust continuous monitoring and vulnerability management programs."
+      "title": "Achieve Your Authority to Operate (ATO)?",
+      "description": "Contact K2 Consulting for expert guidance through the NIST Risk Management Framework process.",
+      "modalFunction": "showCyberSecurityModal()"
     }
   },
-  "auditReporting": {
+  "continuousMonitoring": {
     "hero": {
-      "title": "Audit Support & Compliance Reporting",
-      "subtitle": "Navigating security audits and meeting regulatory reporting requirements like FISMA."
+      "title": "Continuous Monitoring",
+      "subtitle": "Maintaining security awareness and rapid threat detection"
     },
     "overview": {
-      "title": "Meeting Compliance Mandates",
+      "title": "Proactive Security Vigilance",
       "paragraphs": [
-        "Demonstrating compliance with security regulations and standards is essential for many organizations, particularly those working with government agencies. K2 Consulting provides expert Audit Support and Compliance Reporting services, helping you navigate complex requirements like FISMA (Federal Information Security Management Act), NIST standards, and others. We assist organizations in preparing for audits, responding to auditor requests, and addressing any identified findings.",
-        "Our team has extensive experience with federal compliance frameworks. We help develop Plans of Action & Milestones (POA&Ms) to track remediation efforts, compile necessary evidence of control implementation, and generate accurate compliance reports. Whether you need support for an upcoming audit, assistance with remediation activities, or ongoing FISMA reporting, our experts provide the guidance needed to achieve and maintain compliance efficiently."
+        "The threat landscape is constantly evolving, making static security measures insufficient. Continuous Monitoring involves the ongoing observation and analysis of an organization's security posture to detect threats, assess vulnerabilities, and maintain compliance in near real-time. It is a critical component of modern cybersecurity and the NIST RMF.",
+        "K2 Consulting implements and manages robust continuous monitoring programs tailored to your environment. We leverage advanced tools like Security Information and Event Management (SIEM) systems, vulnerability scanners, and threat intelligence feeds to provide comprehensive visibility and enable rapid response to security incidents and emerging risks."
       ],
       "features": [
-        { "icon": "fas fa-clipboard-check", "title": "Audit Readiness Preparation", "description": "Assessing your current posture against audit criteria and identifying gaps." },
-        { "icon": "fas fa-hands-helping", "title": "Audit Liaison & Support", "description": "Assisting during audits by facilitating communication and providing requested evidence." },
-        { "icon": "fas fa-wrench", "title": "Remediation Planning & Tracking", "description": "Developing and managing POA&Ms to address audit findings effectively." },
-        { "icon": "fas fa-file-signature", "title": "FISMA & Compliance Reporting", "description": "Generating accurate and timely reports required by FISMA and other regulations." }
-      ]
-    },
-    "approach": {
-      "title": "Our Audit & Compliance Approach",
-      "cards": [
-        { "title": "Framework Alignment", "description": "Mapping your security controls to specific compliance requirements (e.g., NIST SP 800-53)." },
-        { "title": "Gap Analysis", "description": "Identifying discrepancies between current practices and compliance mandates." },
-        { "title": "Evidence Collection", "description": "Gathering and organizing documentation and artifacts required for audit evidence." },
-        { "title": "Remediation Strategy", "description": "Developing prioritized plans to address identified compliance gaps and audit findings." },
-        { "title": "Reporting Automation", "description": "Leveraging tools where possible to streamline the generation of compliance reports." },
-        { "title": "Continuous Compliance Monitoring", "description": "Implementing processes to maintain compliance posture between formal audits." }
+        {
+          "icon": "fa-shield-virus",
+          "title": "Security Information & Event Management (SIEM)",
+          "description": "Deploying and managing SIEM solutions for centralized log collection, correlation, real-time alerting, and threat detection."
+        },
+        {
+          "icon": "fa-bug",
+          "title": "Ongoing Vulnerability Management",
+          "description": "Regular scanning, analysis, risk prioritization, and remediation tracking for system and application vulnerabilities."
+        },
+        {
+          "icon": "fa-traffic-light",
+          "title": "Security Control Monitoring",
+          "description": "Continuously assessing the effectiveness of implemented security controls against established baselines and compliance requirements."
+        },
+        {
+          "icon": "fa-chart-line",
+          "title": "Threat Intelligence & Reporting",
+          "description": "Integrating threat intelligence feeds and providing regular reporting on security posture, incident trends, and compliance status."
+        }
       ]
     },
     "faq": {
-      "title": "Frequently Asked Questions",
+      "title": "Continuous Monitoring FAQs",
       "questions": [
-        { "question": "What is the difference between an internal and external audit?", "answer": "Internal audits are conducted by an organization's own staff to assess controls, while external audits are performed by independent third parties, often for certification or regulatory purposes." },
-        { "question": "Do we need FISMA compliance if we are a contractor?", "answer": "Often, yes. Government contracts frequently require contractors handling federal information or operating federal systems to comply with FISMA requirements." },
-        { "question": "What is a POA&M?", "answer": "A Plan of Action & Milestones (POA&M) is a document used to track the progress of remediating identified security weaknesses or compliance gaps." },
-        { "question": "How long does audit preparation typically take?", "answer": "The duration varies significantly based on the scope of the audit, the organization's size, and its current security maturity. Starting preparation early is always recommended." }
+        {
+          "question": "Why is Continuous Monitoring essential?",
+          "answer": "It allows organizations to maintain ongoing awareness of their security posture, detect threats quickly, manage vulnerabilities proactively, and make informed risk-based decisions, which is crucial in a dynamic threat environment."
+        },
+        {
+          "question": "What is a SIEM system?",
+          "answer": "A Security Information and Event Management (SIEM) system collects log data from various sources (networks, servers, applications), analyzes it for security threats using correlation rules, and provides real-time alerts and reporting."
+        },
+        {
+          "question": "How does Continuous Monitoring support compliance?",
+          "answer": "Frameworks like NIST RMF mandate continuous monitoring (Step 7). It provides evidence that security controls remain effective over time and helps maintain the system's authorization status (ATO)."
+        },
+        {
+          "question": "Is Continuous Monitoring fully automated?",
+          "answer": "While tools like SIEM and vulnerability scanners provide significant automation, effective continuous monitoring requires human analysis to interpret alerts, investigate potential incidents, prioritize vulnerabilities, and make strategic decisions."
+        }
       ]
     },
     "cta": {
-      "title": "Navigate Audits and Compliance with Confidence?",
-      "description": "Contact us for expert support with security audits, remediation, and compliance reporting."
-    }
-  },
-  "documentationSupport": {
-    "hero": {
-      "title": "Security Documentation & Support",
-      "subtitle": "Developing comprehensive security policies, procedures, and plans to support your security program."
-    },
-    "overview": {
-      "title": "Building a Foundation for Security",
-      "paragraphs": [
-        "Clear, comprehensive, and up-to-date documentation is the foundation of any effective security program. K2 Consulting provides expert Security Documentation services, helping organizations develop the policies, standards, procedures, and plans necessary to define security requirements, guide implementation, and demonstrate compliance. Well-crafted documentation ensures consistency, facilitates training, and provides crucial evidence during audits.",
-        "Our team assists in creating a wide range of security documents, including System Security Plans (SSPs), Incident Response Plans (IRPs), Contingency Plans (CPs), Security Policies, Standard Operating Procedures (SOPs), and more. We tailor documentation to your specific environment and compliance needs (e.g., NIST RMF, ISO 27001). Beyond initial creation, we offer ongoing support to review and update documentation as your systems and the threat landscape evolve, ensuring it remains accurate and relevant."
-      ],
-      "features": [
-        { "icon": "fas fa-file-alt", "title": "Policy & Standard Development", "description": "Creating clear, enforceable security policies and standards aligned with best practices." },
-        { "icon": "fas fa-book-reader", "title": "Procedure & Guideline Creation", "description": "Developing detailed operational procedures and guidelines for security tasks." },
-        { "icon": "fas fa-drafting-compass", "title": "System Security Plans (SSPs)", "description": "Documenting security controls and implementation details as required by frameworks like NIST RMF." },
-        { "icon": "fas fa-sync-alt", "title": "Documentation Maintenance", "description": "Regular review and updates to keep security documentation current and accurate." }
-      ]
-    },
-    "approach": {
-      "title": "Our Documentation & Support Approach",
-      "cards": [
-        { "title": "Requirements Gathering", "description": "Understanding your operational environment, compliance drivers, and specific documentation needs." },
-        { "title": "Template Utilization & Customization", "description": "Leveraging industry-standard templates while tailoring content to your organization." },
-        { "title": "Stakeholder Collaboration", "description": "Working with relevant personnel to ensure accuracy and practicality of documented procedures." },
-        { "title": "Review & Approval Cycles", "description": "Facilitating reviews and obtaining necessary approvals for drafted documentation." },
-        { "title": "Version Control & Management", "description": "Establishing processes for managing document versions and distribution." },
-        { "title": "Ongoing Maintenance Strategy", "description": "Defining a plan for periodic reviews and updates to maintain document relevance." }
-      ]
-    },
-    "faq": {
-      "title": "Frequently Asked Questions",
-      "questions": [
-        { "question": "Why is security documentation so important?", "answer": "It defines expectations, guides actions, ensures consistency, provides training material, forms the basis for audits, and demonstrates due diligence." },
-        { "question": "What is a System Security Plan (SSP)?", "answer": "An SSP is a formal document that provides an overview of the security requirements for an information system and describes the security controls in place or planned for meeting those requirements." },
-        { "question": "How do you ensure documentation stays up-to-date?", "answer": "We recommend establishing a regular review cycle (e.g., annually) and processes to trigger updates whenever significant system changes, policy changes, or new threats emerge." },
-        { "question": "Can you help train our staff on the policies and procedures?", "answer": "Yes, developing documentation often goes hand-in-hand with security awareness training. We can assist in creating training materials based on the finalized documentation." }
-      ]
-    },
-    "cta": {
-      "title": "Formalize Your Security Program?",
-      "description": "Contact us to develop comprehensive security documentation tailored to your needs."
+      "title": "Stay Ahead of Cyber Threats?",
+      "description": "Implement a robust continuous monitoring program with K2 Consulting to enhance your security posture and ensure ongoing compliance.",
+      "modalFunction": "showCyberSecurityModal()"
     }
   }
-} 
+}

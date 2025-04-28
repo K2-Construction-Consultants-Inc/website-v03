@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CMMC Preparation | K2 Consulting</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/site-icons/32_32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="images/site-icons/192_192.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/site-icons/180_180.png"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/navigation.css" />
+    <link rel="stylesheet" href="styles/breadcrumb.css" />
+    <link rel="stylesheet" href="styles/services.css" />
+    <link rel="stylesheet" href="styles/modal.css" />
+    <link rel="stylesheet" href="styles/forms.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body data-page="cmmcPreparation">
+    <div id="navigation"></div>
+    <div id="breadcrumb"></div>
+
+    <main>
+      <section class="service-hero">
+        <video autoplay loop muted playsinline>
+          <source src="images/video-technology.webm" type="video/webm" />
+        </video>
+        <div class="hero-content">
+          <h1 id="heroTitle"></h1>
+          <p id="heroSubtitle"></p>
+        </div>
+      </section>
+
+      <section class="service-section animate-on-scroll">
+        <div class="container">
+          <div class="service-content">
+            <h2 id="overviewTitle"></h2>
+            <div id="overviewParagraphs"></div>
+            <div class="feature-grid" id="overviewFeatures"></div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="section-separator" />
+
+      <section class="faq-section animate-on-scroll">
+        <div class="container">
+          <h2 id="faqTitle"></h2>
+          <div class="carousel">
+            <div class="carousel-items" id="faqItems"></div>
+            <div class="carousel-dots"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-section">
+        <div class="container">
+          <h2 id="ctaTitle"></h2>
+          <p id="ctaDescription"></p>
+          <a href="#" id="ctaButton" class="btn btn-large">Get Started</a>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer"></div>
+    <div id="floatingContact"></div>
+    <div id="generalContactModal"></div>
+    <div id="cyberSecurityContactModal"></div>
+
+    <script src="js/main.js"></script>
+    <script src="js/storage-helper.js"></script>
+    <script src="js/content-cache.js"></script>
+    <script src="js/loader.js"></script>
+    <script src="js/modal.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const pageKey = document.body.getAttribute("data-page");
+        if (!pageKey) {
+          console.error("Page key (data-page) not found on body element.");
+          return;
+        }
+
+        const jsonSource = "content/cyber-security.json";
+
+        // --- Helper Functions Defined Locally ---
+        function setText(selector, text) {
+          const el = document.querySelector(selector);
+          if (el && text != null) el.textContent = text;
+          else if (el) el.textContent = "";
+        }
+        function setImageSource(selector, src, alt) {
+          const el = document.querySelector(selector);
+          if (el && src) {
+            el.src = src;
+            el.alt = alt || "Service Image";
+          } else if (el) {
+            /* Maybe hide or set default? el.style.display = 'none'; */
+          }
+        }
+        function setParagraphs(containerSelector, paragraphs) {
+          const container = document.querySelector(containerSelector);
+          if (container && Array.isArray(paragraphs)) {
+            container.innerHTML = "";
+            paragraphs.forEach((pText) => {
+              const p = document.createElement("p");
+              p.textContent = pText;
+              container.appendChild(p);
+            });
+          } else if (container) {
+            container.innerHTML = ""; /* Clear if no paragraphs */
+          }
+        }
+        function populateDetailCards(containerSelector, cards) {
+          const container = document.querySelector(containerSelector);
+          if (container && Array.isArray(cards)) {
+            container.innerHTML = "";
+            cards.forEach((cardData) => {
+              const card = document.createElement("div");
+              card.className = "detail-card";
+              let innerHTML = "";
+              if (cardData.icon)
+                innerHTML += `<i class="fas ${cardData.icon}"></i>`;
+              if (cardData.title) innerHTML += `<h3>${cardData.title}</h3>`;
+              if (cardData.description)
+                innerHTML += `<p>${cardData.description}</p>`;
+              card.innerHTML = innerHTML;
+              container.appendChild(card);
+            });
+          } else if (container) {
+            container.innerHTML = "";
+          }
+        }
+        function populateFeatureCards(containerSelector, cards) {
+          const container = document.querySelector(containerSelector);
+          if (container && Array.isArray(cards)) {
+            container.innerHTML = "";
+            cards.forEach((cardData) => {
+              const card = document.createElement("div");
+              card.className = "feature";
+              /* Use 'feature' class */ let innerHTML = "";
+              if (cardData.icon)
+                innerHTML += `<i class="fas ${cardData.icon}"></i>`;
+              if (cardData.title) innerHTML += `<h3>${cardData.title}</h3>`;
+              if (cardData.description)
+                innerHTML += `<p>${cardData.description}</p>`;
+              card.innerHTML = innerHTML;
+              container.appendChild(card);
+            });
+          } else if (container) {
+            container.innerHTML = "";
+          }
+        }
+        function populateFaqItems(
+          itemsContainerSelector,
+          dotsContainerSelector,
+          questions
+        ) {
+          const itemsContainer = document.querySelector(itemsContainerSelector);
+          const dotsContainer = document.querySelector(dotsContainerSelector);
+          if (!itemsContainer || !dotsContainer) {
+            console.warn("FAQ items or dots container not found");
+            if (itemsContainer) itemsContainer.innerHTML = "";
+            if (dotsContainer) dotsContainer.innerHTML = "";
+            return;
+          }
+          itemsContainer.innerHTML = "";
+          dotsContainer.innerHTML = "";
+          if (Array.isArray(questions) && questions.length > 0) {
+            questions.forEach((qData, index) => {
+              const item = document.createElement("div");
+              item.className = "carousel-item";
+              if (index === 0) item.classList.add("active");
+              // Use h3 for question to match pmis.html example if needed
+              item.innerHTML = `<h3>${qData.question}</h3><p>${qData.answer}</p>`;
+              itemsContainer.appendChild(item);
+
+              const dot = document.createElement("span");
+              dot.className = "carousel-dot";
+              if (index === 0) dot.classList.add("active");
+              dot.setAttribute("data-index", index);
+              dotsContainer.appendChild(dot);
+            });
+            // Initialize carousel after adding items
+            if (typeof window.initializeCarousel === "function") {
+              const carouselElement = itemsContainer.closest(".carousel");
+              if (carouselElement) {
+                window.initializeCarousel(carouselElement);
+              } else {
+                console.warn("Could not find parent .carousel for FAQ init");
+              }
+            } else {
+              console.warn("initializeCarousel function not found.");
+            }
+          } else {
+            itemsContainer.innerHTML = "<p>No FAQs available.</p>";
+          }
+        }
+
+        // --- Load Content ---
+        if (window.ContentCache) {
+          ContentCache.loadContent(
+            jsonSource,
+            function (data) {
+              const pageData = data[pageKey];
+              if (!pageData) {
+                console.error(
+                  `Content for key '${pageKey}' not found in ${jsonSource}`
+                );
+                return;
+              }
+
+              setText("#heroTitle", pageData.hero?.title);
+              setText("#heroSubtitle", pageData.hero?.subtitle);
+              setText("#overviewTitle", pageData.overview?.title);
+              setParagraphs(
+                "#overviewParagraphs",
+                pageData.overview?.paragraphs
+              );
+              populateFeatureCards(
+                "#overviewFeatures",
+                pageData.overview?.features
+              );
+              setText("#faqTitle", pageData.faq?.title);
+              populateFaqItems(
+                "#faqItems",
+                ".carousel-dots",
+                pageData.faq?.questions
+              );
+              setText("#ctaTitle", pageData.cta?.title);
+              setText("#ctaDescription", pageData.cta?.description);
+              const ctaButton = document.getElementById("ctaButton");
+              if (ctaButton && pageData.cta?.modalFunction) {
+                ctaButton.setAttribute(
+                  "onclick",
+                  pageData.cta.modalFunction + "; return false;"
+                );
+                if (pageData.cta.buttonText) {
+                  // Optional: Set button text from JSON
+                  setText("#ctaButton", pageData.cta.buttonText);
+                }
+              } else if (ctaButton) {
+                ctaButton.setAttribute(
+                  "onclick",
+                  'window.showGeneralModal ? window.showGeneralModal() : console.error("showGeneralModal function not found"); return false;'
+                );
+                console.warn(
+                  "CTA modal function not specified in JSON, defaulting to general modal."
+                );
+              }
+            },
+            true
+          ); // Force refresh might be needed initially
+        } else {
+          console.error(
+            "ContentCache not available. Cannot load dynamic content."
+          );
+        }
+      });
+    </script>
+  </body>
+</html>
