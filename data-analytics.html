@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Data Analytics | Data Transformation | Critical Path Controls</title>
+    <title>
+      Data Analytics | Data Transformation | [Consulting Services Group]
+    </title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/main.css" />
@@ -57,9 +59,12 @@
           <!-- NOTE: Banner Image moved below dashboard section for better flow -->
           <!-- Embedded Dashboard Section -->
           <div class="service-content">
-             <h2 id="overviewTitle"></h2>
-             <div id="overviewParagraphs"></div>
-            <div class="analytics-dashboard" style="margin-top: 20px; margin-bottom: 30px;">
+            <h2 id="overviewTitle"></h2>
+            <div id="overviewParagraphs"></div>
+            <div
+              class="analytics-dashboard"
+              style="margin-top: 20px; margin-bottom: 30px"
+            >
               <iframe
                 id="dashboardIframe"
                 title="K2 Analytics Dashboard"
@@ -73,8 +78,8 @@
           </div>
           <!-- End Embedded Dashboard Section -->
 
-           <!-- Using relevant image -->
-           <div class="service-banner" style="margin-top: 40px;">
+          <!-- Using relevant image -->
+          <div class="service-banner" style="margin-top: 40px">
             <img
               id="overview2Banner"
               src="images/service-process-analytics.png"
@@ -84,16 +89,17 @@
           <div class="service-content">
             <h2 id="overview2Title"></h2>
             <div id="overview2Paragraphs"></div>
-             <div class="feature-grid" id="overview2Features"></div>
+            <div class="feature-grid" id="overview2Features"></div>
           </div>
         </div>
       </section>
 
-       <hr class="section-separator"> <!-- Added Separator -->
+      <hr class="section-separator" />
+      <!-- Added Separator -->
 
       <!-- Approach section -->
       <section class="service-section with-video animate-on-scroll">
-         <!-- Using relevant video -->
+        <!-- Using relevant video -->
         <video class="background-video" autoplay loop muted playsinline>
           <source src="images/video-technology.webm" type="video/webm" />
         </video>
@@ -119,7 +125,12 @@
         <div class="container">
           <h2 id="ctaTitle"></h2>
           <p id="ctaDescription"></p>
-          <a href="#" class="btn btn-large" onclick="showDataTransformationModal()">Get Started</a>
+          <a
+            href="#"
+            class="btn btn-large"
+            onclick="showDataTransformationModal()"
+            >Get Started</a
+          >
         </div>
       </section>
     </main>
@@ -137,51 +148,141 @@
     <script src="js/main.js"></script>
     <script src="js/loader.js"></script>
     <!-- Content Loading Script -->
-     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const pageKey = document.body.getAttribute('data-page');
-            if (!pageKey) { /* ... error handling ... */ return; }
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const pageKey = document.body.getAttribute("data-page");
+        if (!pageKey) {
+          /* ... error handling ... */ return;
+        }
 
-            fetch('content/data-transformation.json') // Fetch the group JSON
-                .then(response => { /* ... error handling ... */ return response.json(); })
-                .then(data => {
-                    const pageData = data[pageKey];
-                    if (!pageData) { /* ... error handling ... */ return; }
+        fetch("content/data-transformation.json") // Fetch the group JSON
+          .then((response) => {
+            /* ... error handling ... */ return response.json();
+          })
+          .then((data) => {
+            const pageData = data[pageKey];
+            if (!pageData) {
+              /* ... error handling ... */ return;
+            }
 
-                    // Populate content using helper functions
-                    setText('#heroTitle', pageData.hero?.title);
-                    setText('#heroSubtitle', pageData.hero?.subtitle);
-                    // Overview 1 (Dashboard Section)
-                    setText('#overviewTitle', pageData.overview?.title);
-                    setParagraphs('#overviewParagraphs', pageData.overview?.paragraphs);
-                    setIframeSrc('#dashboardIframe', pageData.overview?.dashboardUrl);
-                    // Overview 2 (Features Section)
-                    setImageSource('#overview2Banner', pageData.overview2?.banner, pageData.overview2?.title);
-                    setText('#overview2Title', pageData.overview2?.title);
-                    setParagraphs('#overview2Paragraphs', pageData.overview2?.paragraphs);
-                    populateFeatureCards('#overview2Features', pageData.overview2?.features);
-                    // Approach, FAQ, CTA
-                    setText('#approachTitle', pageData.approach?.title);
-                    populateDetailCards('#approachCards', pageData.approach?.cards);
-                    setText('#faqTitle', pageData.faq?.title);
-                    populateFaqItems('#faqItems', pageData.faq?.questions);
-                    setText('#ctaTitle', pageData.cta?.title);
-                    setText('#ctaDescription', pageData.cta?.description);
-                    
-                    if (window.initializeCarousel) { window.initializeCarousel(); }
-                    else { console.warn('initializeCarousel function not found.'); }
-                })
-                .catch(error => { console.error('Error loading content:', error); });
+            // Populate content using helper functions
+            setText("#heroTitle", pageData.hero?.title);
+            setText("#heroSubtitle", pageData.hero?.subtitle);
+            // Overview 1 (Dashboard Section)
+            setText("#overviewTitle", pageData.overview?.title);
+            setParagraphs("#overviewParagraphs", pageData.overview?.paragraphs);
+            setIframeSrc("#dashboardIframe", pageData.overview?.dashboardUrl);
+            // Overview 2 (Features Section)
+            setImageSource(
+              "#overview2Banner",
+              pageData.overview2?.banner,
+              pageData.overview2?.title
+            );
+            setText("#overview2Title", pageData.overview2?.title);
+            setParagraphs(
+              "#overview2Paragraphs",
+              pageData.overview2?.paragraphs
+            );
+            populateFeatureCards(
+              "#overview2Features",
+              pageData.overview2?.features
+            );
+            // Approach, FAQ, CTA
+            setText("#approachTitle", pageData.approach?.title);
+            populateDetailCards("#approachCards", pageData.approach?.cards);
+            setText("#faqTitle", pageData.faq?.title);
+            populateFaqItems("#faqItems", pageData.faq?.questions);
+            setText("#ctaTitle", pageData.cta?.title);
+            setText("#ctaDescription", pageData.cta?.description);
 
-            // Include all helper functions here (incl. NEW setIframeSrc)
-            function setText(selector, text) { const el = document.querySelector(selector); if(el && text) el.textContent = text; }
-            function setImageSource(selector, src, alt) { const el = document.querySelector(selector); if(el && src) { el.src = src; el.alt = alt || 'Service Image'; } }
-            function setIframeSrc(selector, src) { const el = document.querySelector(selector); if (el && src) { el.src = src; } }
-            function setParagraphs(containerSelector, paragraphs) { const container = document.querySelector(containerSelector); if (container && Array.isArray(paragraphs)) { container.innerHTML = ''; paragraphs.forEach(pText => { const p = document.createElement('p'); p.textContent = pText; container.appendChild(p); }); } }
-            function populateDetailCards(containerSelector, cards) { const container = document.querySelector(containerSelector); if (container && Array.isArray(cards)) { container.innerHTML = ''; cards.forEach(cardData => { const card = document.createElement('div'); card.className = 'detail-card'; let innerHTML = ''; if (cardData.icon) innerHTML += `<i class="fas ${cardData.icon}"></i>`; if (cardData.title) innerHTML += `<h3>${cardData.title}</h3>`; if (cardData.description) innerHTML += `<p>${cardData.description}</p>`; card.innerHTML = innerHTML; container.appendChild(card); }); } }
-            function populateFeatureCards(containerSelector, cards) { const container = document.querySelector(containerSelector); if (container && Array.isArray(cards)) { container.innerHTML = ''; cards.forEach(cardData => { const card = document.createElement('div'); card.className = 'feature'; let innerHTML = ''; if (cardData.icon) innerHTML += `<i class="fas ${cardData.icon}"></i>`; if (cardData.title) innerHTML += `<h3>${cardData.title}</h3>`; if (cardData.description) innerHTML += `<p>${cardData.description}</p>`; card.innerHTML = innerHTML; container.appendChild(card); }); } }
-            function populateFaqItems(containerSelector, questions) { const container = document.querySelector(containerSelector); if (container && Array.isArray(questions)) { container.innerHTML = ''; questions.forEach(qData => { const item = document.createElement('div'); item.className = 'carousel-item'; item.innerHTML = `<h3>${qData.question}</h3><p>${qData.answer}</p>`; container.appendChild(item); }); } }
-        });
+            if (window.initializeCarousel) {
+              window.initializeCarousel();
+            } else {
+              console.warn("initializeCarousel function not found.");
+            }
+          })
+          .catch((error) => {
+            console.error("Error loading content:", error);
+          });
+
+        // Include all helper functions here (incl. NEW setIframeSrc)
+        function setText(selector, text) {
+          const el = document.querySelector(selector);
+          if (el && text) el.textContent = text;
+        }
+        function setImageSource(selector, src, alt) {
+          const el = document.querySelector(selector);
+          if (el && src) {
+            el.src = src;
+            el.alt = alt || "Service Image";
+          }
+        }
+        function setIframeSrc(selector, src) {
+          const el = document.querySelector(selector);
+          if (el && src) {
+            el.src = src;
+          }
+        }
+        function setParagraphs(containerSelector, paragraphs) {
+          const container = document.querySelector(containerSelector);
+          if (container && Array.isArray(paragraphs)) {
+            container.innerHTML = "";
+            paragraphs.forEach((pText) => {
+              const p = document.createElement("p");
+              p.textContent = pText;
+              container.appendChild(p);
+            });
+          }
+        }
+        function populateDetailCards(containerSelector, cards) {
+          const container = document.querySelector(containerSelector);
+          if (container && Array.isArray(cards)) {
+            container.innerHTML = "";
+            cards.forEach((cardData) => {
+              const card = document.createElement("div");
+              card.className = "detail-card";
+              let innerHTML = "";
+              if (cardData.icon)
+                innerHTML += `<i class="fas ${cardData.icon}"></i>`;
+              if (cardData.title) innerHTML += `<h3>${cardData.title}</h3>`;
+              if (cardData.description)
+                innerHTML += `<p>${cardData.description}</p>`;
+              card.innerHTML = innerHTML;
+              container.appendChild(card);
+            });
+          }
+        }
+        function populateFeatureCards(containerSelector, cards) {
+          const container = document.querySelector(containerSelector);
+          if (container && Array.isArray(cards)) {
+            container.innerHTML = "";
+            cards.forEach((cardData) => {
+              const card = document.createElement("div");
+              card.className = "feature";
+              let innerHTML = "";
+              if (cardData.icon)
+                innerHTML += `<i class="fas ${cardData.icon}"></i>`;
+              if (cardData.title) innerHTML += `<h3>${cardData.title}</h3>`;
+              if (cardData.description)
+                innerHTML += `<p>${cardData.description}</p>`;
+              card.innerHTML = innerHTML;
+              container.appendChild(card);
+            });
+          }
+        }
+        function populateFaqItems(containerSelector, questions) {
+          const container = document.querySelector(containerSelector);
+          if (container && Array.isArray(questions)) {
+            container.innerHTML = "";
+            questions.forEach((qData) => {
+              const item = document.createElement("div");
+              item.className = "carousel-item";
+              item.innerHTML = `<h3>${qData.question}</h3><p>${qData.answer}</p>`;
+              container.appendChild(item);
+            });
+          }
+        }
+      });
     </script>
   </body>
-</html> 
+</html>

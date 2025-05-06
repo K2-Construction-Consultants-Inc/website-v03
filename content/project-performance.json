@@ -116,7 +116,7 @@
     "overview": {
       "title": "Comprehensive Project Planning Solutions",
       "paragraphs": [
-        "At K2 Consulting's Critical Path Controls division, our Planning & Scheduling team specializes in developing baseline schedules, critical path analysis, and refining schedule logic to ensure accuracy and project alignment. We work closely with project teams to address scheduling challenges, correct issues, and optimize timelines, creating schedules that are not only realistic but also actionable and manageable.",
+        "At K2, our Planning & Scheduling team specializes in developing baseline schedules, critical path analysis, and refining schedule logic to ensure accuracy and project alignment. We work closely with project teams to address scheduling challenges, correct issues, and optimize timelines, creating schedules that are not only realistic but also actionable and manageable.",
         "Staffed by certified scheduling professionals with deep expertise, we use tools like Primavera P6 and Microsoft Project to deliver high-quality schedules that meet industry standards. Whether building an initial schedule, managing updates, or recovering a delayed timeline, our team ensures every step supports your project's success. With a focus on collaboration, precision, and clear communication, we provide solutions that keep projects on track and deliver results you can count on."
       ],
       "features": [
@@ -317,7 +317,7 @@
         {
           "icon": "fas fa-check-circle",
           "title": "EVMS Compliance",
-          "description": "Expert guidance to achieve and maintain compliance with EIA-748 and DOE 413.3B guidelines"
+          "description": "Expert guidance to achieve and maintain compliance with EIA-748 and DOE 413.3B guidelines using IP2M-METRR's maturity assessment framework"
         },
         {
           "icon": "fas fa-chart-bar",

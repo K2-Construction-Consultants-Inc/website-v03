@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Virtual Design & Construction (VDC) | Data Transformation | Critical Path Controls</title>
+    <title>
+      Virtual Design & Construction (VDC) | Data Transformation | [Consulting
+      Services Group]
+    </title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/main.css" />
@@ -45,7 +48,7 @@
           <source src="images/video-claims.webm" type="video/webm" />
         </video>
         <div class="hero-content">
-           <h1 id="heroTitle"></h1>
+          <h1 id="heroTitle"></h1>
           <p id="heroSubtitle"></p>
         </div>
       </section>
@@ -63,12 +66,12 @@
           <div class="service-content">
             <h2 id="overviewTitle"></h2>
             <div id="overviewParagraphs"></div>
-             <div class="feature-grid" id="overviewFeatures"></div>
+            <div class="feature-grid" id="overviewFeatures"></div>
           </div>
         </div>
       </section>
 
-       <hr class="section-separator">
+      <hr class="section-separator" />
 
       <!-- Approach section -->
       <section class="service-section with-video animate-on-scroll">
@@ -95,9 +98,14 @@
       <!-- CTA section -->
       <section class="cta-section">
         <div class="container">
-           <h2 id="ctaTitle"></h2>
+          <h2 id="ctaTitle"></h2>
           <p id="ctaDescription"></p>
-          <a href="#" class="btn btn-large" onclick="showDataTransformationModal()">Get Started</a>
+          <a
+            href="#"
+            class="btn btn-large"
+            onclick="showDataTransformationModal()"
+            >Get Started</a
+          >
         </div>
       </section>
     </main>
@@ -114,45 +122,127 @@
     <!-- Load scripts -->
     <script src="js/main.js"></script>
     <script src="js/loader.js"></script>
-     <!-- Content Loading Script -->
-     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const pageKey = document.body.getAttribute('data-page');
-            if (!pageKey) { /* ... error handling ... */ return; }
+    <!-- Content Loading Script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const pageKey = document.body.getAttribute("data-page");
+        if (!pageKey) {
+          /* ... error handling ... */ return;
+        }
 
-            fetch('content/data-transformation.json') // Fetch the group JSON
-                .then(response => { /* ... error handling ... */ return response.json(); })
-                .then(data => {
-                    const pageData = data[pageKey];
-                    if (!pageData) { /* ... error handling ... */ return; }
+        fetch("content/data-transformation.json") // Fetch the group JSON
+          .then((response) => {
+            /* ... error handling ... */ return response.json();
+          })
+          .then((data) => {
+            const pageData = data[pageKey];
+            if (!pageData) {
+              /* ... error handling ... */ return;
+            }
 
-                    // Populate content using helper functions
-                    setText('#heroTitle', pageData.hero?.title);
-                    setText('#heroSubtitle', pageData.hero?.subtitle);
-                    setImageSource('#overviewBanner', pageData.overview?.banner, pageData.hero?.title);
-                    setText('#overviewTitle', pageData.overview?.title);
-                    setParagraphs('#overviewParagraphs', pageData.overview?.paragraphs);
-                    populateFeatureCards('#overviewFeatures', pageData.overview?.features);
-                    setText('#approachTitle', pageData.approach?.title);
-                    populateDetailCards('#approachCards', pageData.approach?.cards);
-                    setText('#faqTitle', pageData.faq?.title);
-                    populateFaqItems('#faqItems', pageData.faq?.questions);
-                    setText('#ctaTitle', pageData.cta?.title);
-                    setText('#ctaDescription', pageData.cta?.description);
-                    
-                    if (window.initializeCarousel) { window.initializeCarousel(); }
-                    else { console.warn('initializeCarousel function not found.'); }
-                })
-                .catch(error => { console.error('Error loading content:', error); });
+            // Populate content using helper functions
+            setText("#heroTitle", pageData.hero?.title);
+            setText("#heroSubtitle", pageData.hero?.subtitle);
+            setImageSource(
+              "#overviewBanner",
+              pageData.overview?.banner,
+              pageData.hero?.title
+            );
+            setText("#overviewTitle", pageData.overview?.title);
+            setParagraphs("#overviewParagraphs", pageData.overview?.paragraphs);
+            populateFeatureCards(
+              "#overviewFeatures",
+              pageData.overview?.features
+            );
+            setText("#approachTitle", pageData.approach?.title);
+            populateDetailCards("#approachCards", pageData.approach?.cards);
+            setText("#faqTitle", pageData.faq?.title);
+            populateFaqItems("#faqItems", pageData.faq?.questions);
+            setText("#ctaTitle", pageData.cta?.title);
+            setText("#ctaDescription", pageData.cta?.description);
 
-             // Include all helper functions here
-             function setText(selector, text) { const el = document.querySelector(selector); if(el && text) el.textContent = text; }
-             function setImageSource(selector, src, alt) { const el = document.querySelector(selector); if(el && src) { el.src = src; el.alt = alt || 'Service Image'; } }
-             function setParagraphs(containerSelector, paragraphs) { const container = document.querySelector(containerSelector); if (container && Array.isArray(paragraphs)) { container.innerHTML = ''; paragraphs.forEach(pText => { const p = document.createElement('p'); p.textContent = pText; container.appendChild(p); }); } }
-             function populateDetailCards(containerSelector, cards) { const container = document.querySelector(containerSelector); if (container && Array.isArray(cards)) { container.innerHTML = ''; cards.forEach(cardData => { const card = document.createElement('div'); card.className = 'detail-card'; let innerHTML = ''; if (cardData.icon) innerHTML += `<i class="fas ${cardData.icon}"></i>`; if (cardData.title) innerHTML += `<h3>${cardData.title}</h3>`; if (cardData.description) innerHTML += `<p>${cardData.description}</p>`; card.innerHTML = innerHTML; container.appendChild(card); }); } }
-             function populateFeatureCards(containerSelector, cards) { const container = document.querySelector(containerSelector); if (container && Array.isArray(cards)) { container.innerHTML = ''; cards.forEach(cardData => { const card = document.createElement('div'); card.className = 'feature'; let innerHTML = ''; if (cardData.icon) innerHTML += `<i class="fas ${cardData.icon}"></i>`; if (cardData.title) innerHTML += `<h3>${cardData.title}</h3>`; if (cardData.description) innerHTML += `<p>${cardData.description}</p>`; card.innerHTML = innerHTML; container.appendChild(card); }); } }
-             function populateFaqItems(containerSelector, questions) { const container = document.querySelector(containerSelector); if (container && Array.isArray(questions)) { container.innerHTML = ''; questions.forEach(qData => { const item = document.createElement('div'); item.className = 'carousel-item'; item.innerHTML = `<h3>${qData.question}</h3><p>${qData.answer}</p>`; container.appendChild(item); }); } }
-        });
+            if (window.initializeCarousel) {
+              window.initializeCarousel();
+            } else {
+              console.warn("initializeCarousel function not found.");
+            }
+          })
+          .catch((error) => {
+            console.error("Error loading content:", error);
+          });
+
+        // Include all helper functions here
+        function setText(selector, text) {
+          const el = document.querySelector(selector);
+          if (el && text) el.textContent = text;
+        }
+        function setImageSource(selector, src, alt) {
+          const el = document.querySelector(selector);
+          if (el && src) {
+            el.src = src;
+            el.alt = alt || "Service Image";
+          }
+        }
+        function setParagraphs(containerSelector, paragraphs) {
+          const container = document.querySelector(containerSelector);
+          if (container && Array.isArray(paragraphs)) {
+            container.innerHTML = "";
+            paragraphs.forEach((pText) => {
+              const p = document.createElement("p");
+              p.textContent = pText;
+              container.appendChild(p);
+            });
+          }
+        }
+        function populateDetailCards(containerSelector, cards) {
+          const container = document.querySelector(containerSelector);
+          if (container && Array.isArray(cards)) {
+            container.innerHTML = "";
+            cards.forEach((cardData) => {
+              const card = document.createElement("div");
+              card.className = "detail-card";
+              let innerHTML = "";
+              if (cardData.icon)
+                innerHTML += `<i class="fas ${cardData.icon}"></i>`;
+              if (cardData.title) innerHTML += `<h3>${cardData.title}</h3>`;
+              if (cardData.description)
+                innerHTML += `<p>${cardData.description}</p>`;
+              card.innerHTML = innerHTML;
+              container.appendChild(card);
+            });
+          }
+        }
+        function populateFeatureCards(containerSelector, cards) {
+          const container = document.querySelector(containerSelector);
+          if (container && Array.isArray(cards)) {
+            container.innerHTML = "";
+            cards.forEach((cardData) => {
+              const card = document.createElement("div");
+              card.className = "feature";
+              let innerHTML = "";
+              if (cardData.icon)
+                innerHTML += `<i class="fas ${cardData.icon}"></i>`;
+              if (cardData.title) innerHTML += `<h3>${cardData.title}</h3>`;
+              if (cardData.description)
+                innerHTML += `<p>${cardData.description}</p>`;
+              card.innerHTML = innerHTML;
+              container.appendChild(card);
+            });
+          }
+        }
+        function populateFaqItems(containerSelector, questions) {
+          const container = document.querySelector(containerSelector);
+          if (container && Array.isArray(questions)) {
+            container.innerHTML = "";
+            questions.forEach((qData) => {
+              const item = document.createElement("div");
+              item.className = "carousel-item";
+              item.innerHTML = `<h3>${qData.question}</h3><p>${qData.answer}</p>`;
+              container.appendChild(item);
+            });
+          }
+        }
+      });
     </script>
   </body>
-</html> 
+</html>

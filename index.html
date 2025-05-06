@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Critical Path Controls | K2 Consulting</title>
+    <title>[Consulting Services Group] | K2 Consulting</title>
     <link
       rel="icon"
       type="image/png"
@@ -176,7 +176,7 @@
     <main>
       <section class="service-hero">
         <div class="hero-content">
-          <h1>Critical Path Controls</h1>
+          <h1>Consulting Services Group</h1>
           <p>
             Delivering excellence in project controls and management solutions
           </p>
@@ -443,8 +443,8 @@
         <div class="container">
           <h2>Ready to Optimize Your Projects?</h2>
           <p>
-            Contact us today to discuss your specific needs and learn how
-            Critical Path Controls can help you achieve project success.
+            Contact us today to discuss your specific needs and learn how our
+            [Consulting Services Group] can help you achieve project success.
           </p>
           <!-- Ensure window.showGeneralModal() is the correct function for your general modal -->
           <a
@@ -733,9 +733,9 @@
                     resolve(); // Resolve anyway to not block Promise.all
                     return;
                   }
-                  
+
                   // Get the specific data object for this section (e.g., data.projectPerformance)
-                  const sectionData = data[source.key]; 
+                  const sectionData = data[source.key];
                   const prefix = "#" + source.prefix + "-"; // e.g., '#pp-'
 
                   // Populate content using the specific sectionData
@@ -744,7 +744,10 @@
                     sectionData.overview?.banner,
                     sectionData.hero?.title + " Overview" // Use sectionData here
                   );
-                  setText(prefix + "overviewTitle", sectionData.overview?.title); // Use sectionData here
+                  setText(
+                    prefix + "overviewTitle",
+                    sectionData.overview?.title
+                  ); // Use sectionData here
                   setParagraphs(
                     prefix + "overviewParagraphs",
                     sectionData.overview?.paragraphs // Use sectionData here
@@ -759,22 +762,37 @@
                     sectionData.serviceOfferings?.cards // Use sectionData here
                   );
 
-                  // Collect FAQs 
+                  // Collect FAQs
                   // For cyber-security, iterate through all top-level keys in the raw data
                   // For others, just use the faq under the main key
                   if (source.key === "cyberSecurity") {
                     // Iterate through all keys in the loaded cyber-security data
-                    Object.keys(data).forEach(key => {
-                      if (data[key] && data[key].faq && Array.isArray(data[key].faq.questions)) {
-                        combinedFaqs = combinedFaqs.concat(data[key].faq.questions);
-                        console.log(`Collected ${data[key].faq.questions.length} FAQs from ${source.file} -> ${key}`);
+                    Object.keys(data).forEach((key) => {
+                      if (
+                        data[key] &&
+                        data[key].faq &&
+                        Array.isArray(data[key].faq.questions)
+                      ) {
+                        combinedFaqs = combinedFaqs.concat(
+                          data[key].faq.questions
+                        );
+                        console.log(
+                          `Collected ${data[key].faq.questions.length} FAQs from ${source.file} -> ${key}`
+                        );
                       }
                     });
                   } else {
-                     // Original logic for other sections
-                    if (sectionData.faq && Array.isArray(sectionData.faq.questions)) {
-                       combinedFaqs = combinedFaqs.concat(sectionData.faq.questions);
-                       console.log(`Collected ${sectionData.faq.questions.length} FAQs from ${source.file} -> ${source.key}`);
+                    // Original logic for other sections
+                    if (
+                      sectionData.faq &&
+                      Array.isArray(sectionData.faq.questions)
+                    ) {
+                      combinedFaqs = combinedFaqs.concat(
+                        sectionData.faq.questions
+                      );
+                      console.log(
+                        `Collected ${sectionData.faq.questions.length} FAQs from ${source.file} -> ${source.key}`
+                      );
                     }
                   }
 

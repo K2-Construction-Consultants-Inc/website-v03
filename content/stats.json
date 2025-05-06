@@ -1,14 +1,14 @@
 {
   "stats": [
     {
-      "value": 25,
+      "value": 30,
       "label": "Highly-Experienced Professionals",
       "image": "images/stats-professionals.jpg",
       "suffix": "+"
     },
     {
-      "value": 34,
-      "label": "Years of Critical Path Consulting Experience",
+      "value": 35,
+      "label": "Years of [Consulting Services] Experience",
       "image": "images/stats-experience.jpg",
       "suffix": "+"
     },
