@@ -17,7 +17,7 @@
       "cards": [
         {
           "icon": "fas fa-database",
-          "title": "PMIS",
+          "title": "Project Management Information Systems (PMIS)",
           "description": "Robust Project Management Information Systems tailored to your needs, ensuring data integrity, process automation, and accessibility across your enterprise.",
           "link": "pmis.html"
         },
@@ -29,7 +29,7 @@
         },
         {
           "icon": "fas fa-brain",
-          "title": "AI / ML",
+          "title": "Artificial Intelligence & Machine Learning (AI/ML)",
           "description": "Leveraging Artificial Intelligence and Machine Learning for predictive insights and automated analysis. Enhance forecasting and risk identification capabilities.",
           "link": "ai-ml.html"
         },
